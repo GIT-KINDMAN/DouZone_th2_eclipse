@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ex04.constructor","c":"MainEntry","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"ex04.constructor","c":"MainEntry","l":"MainEntry()","u":"%3Cinit%3E()"},{"p":"ex04.constructor","c":"MainEntry","l":"mul(int, int)","u":"mul(int,int)"}];updateSearchResults();
