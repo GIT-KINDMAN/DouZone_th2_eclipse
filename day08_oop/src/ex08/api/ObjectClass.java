@@ -14,7 +14,7 @@ public class ObjectClass {
 		System.out.println("hash code: " + pt.hashCode()); // 자리수는 성능에 따라 달라질 수도 있음 // 366712642
 		System.out.println("Object String: " + pt.toString()); // Object String: ex08.api.Point@15db9742
 		System.out.println("Object String: " + pt);
-		System.out.printf("10진수: %d\n", 0x15db9742); // hashCode 366712642 = Point@ 0x15db9742
+		System.out.printf("10진수: %d\n", 0x15db9742); // hashCode 366712642 = (클래스명)@ 0x15db9742
 		
 		System.out.println("==============================================");
 		
