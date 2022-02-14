@@ -35,5 +35,10 @@ public class UserRunnable implements Runnable {
 		new Thread(new UserRunnable("u1")).start();
 		new Thread(new UserRunnable("u2")).start();
 		new Thread(new UserRunnable("u3")).start();
+		
+		System.out.println("------------------------------");
+		System.out.println(new Thread(new UserRunnable("u1")).getId());
+		System.out.println(new Thread(new UserRunnable("u1")).getName());
+		System.out.println("------------------------------");
 	}
 }
