@@ -1,4 +1,4 @@
-package quiz;
+package ex09.io_QuizBMI;
 
 import java.io.Serializable;
 
