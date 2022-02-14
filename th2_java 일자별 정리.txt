@@ -1,3 +1,100 @@
+>> day13 -  22/02/14
+ 
+  > RandomAccessFile  : r/w 가능
+
+  > Thread <--- java.lang package
+  - 1개의 CPU는 1개의 작업
+       "시간차" 
+
+   Thread  class
+   Runnable  interface 
+
+   public void run() { } // 스레드 실행부(구현부)
+
+   > Synchronized(동기화)
+  
+   형식>
+   public synchronized void deposit(int amount, String name) { 
+	임계영역,......;
+   }
+
+   public void deposit(int amount, String name) { 
+	synchronized(this) {
+		임계영역,......;
+	}
+   }
+
+  > inner class
+ 클래스(outer class)안에 포함되어 있는 클래스(inner class)를 말함
+
+  > event
+   ~~~~~Listener  <----- interface
+   ~~~~Adapter    <----- class
+ 
+ >> GUI : awt, swing, JavaFX (jdk 7.0 이후~)  - 뺄수도~
+  
+ > lambda
+
+ > network
+
+ > Oracle
+
+ > JDBC
+
+ > Web
+
+=========================================
+>> day12 -  22/02/11
+
+ > IO ( Input  Ouput ) <----- java.io package
+
+	         Input			 	  Output
+   byte	   ~~~~InputStream		|	~~~OutputStream
+   charater	   ~~~~Reader		|	~~~Writer
+
+  -- InputStream : 입력의 최상위 클래스 : read()
+  -- OutputStream : 출력의 최상위 클래스 : write()
+
+문제] 사칙연산 프로그램 만들기 (io 이용할것)
+  3
+  5
+  +
+  3 + 5 = 8 
+
+  - File
+
+   cf) URI  vs URL 
+
+문제] 비만도 측정 프로그램 작성하기 - collection, file io 이용하기
+   추가 / 삭제 / 출력 /  파일저장 / 종료  처리할것 
+
+  몸무게, 키 를 입력 받아서  BMI 계산하기
+  BMI = 몸무게 / ( (키 / 100.0) * (키 / 100.0) )  ;
+
+  남 : (신장cm-100) X 0.9
+  여 : (신장cm-100) X 0.85
+
+ 판정 >
+18.5 미만	체중부족
+18.5 ~ 22.9	정상
+23.0 ~ 24.9	과체중
+25.0 이상	비만
+
+
+ URL
+ URI
+
+  DataInputStream	 / DataOutputStream
+  ObjectInputStream 	 / ObjectOutputStream
+ 
+   readXXX();	     		writeXXX(); 	
+          자료형		  	         자료형
+
+
+
+
+
+============================================
 >> day11 -  22/02/10
 
   > Generic(제네릭)  :     <T> 
