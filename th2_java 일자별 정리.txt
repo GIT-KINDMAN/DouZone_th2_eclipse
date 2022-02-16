@@ -1,19 +1,76 @@
+>> day15 -  22/02/16
+
+> network  <---- java.net.* ; 
+  - ISO (OSI)  7 Layer 
+     물데네트세표응
+낮 <--   	    --> 높
+
+    TCP / IP
+
+   IPv4  :  211.200.90.77
+   IPv6
+    
+    Domain : 223.130.200.107
+   	   223.130.195.200
+    DNS    : www.naver.com
+
+    211.249.220.24
 
 
+   http / https
+   ftp
+   smtp
+   pop
+   .....
+  
+  protocal : 통신규약  
+
+  "1개의 회선은 1개의 사이트 연결"
+           port number 로 여러개의 사이트 연결가능
+
+ cmd> netstat -a  or  -n or -an
+
+    http://localhost
+    http://127.0.0.1
+    http://211.200.90.77
+
+   - TCP  		vs  	UDP
+    신뢰성있음		신뢰성낮음
+    양방향성	(전화)		단방향성(방송국,편지)
+
+   패킷(packet)  : 데이터 조각
+   소켓 (socket)  
+
+   
+ > Oracle
+
+ > JDBC
+
+ > Web
+
+--------------------------------------------------------
 >> 팀(조)별 과제  - 매주 화요일 PM 2시:10 ~ 
  <3번째 과제 : DataBase >
  >> 통합 과제 - 데이터베이스 종류(ORDBMS,NoSQL) 및 장단점 ,
-           DML(select, insert, update, delete), DCL, DDL 명령어 형식 
-           주요 용어 조사  
+	        DML(select, insert, update, delete), DCL, DDL 명령어 형식 
+	        주요 용어 조사  
 
-   --- 참고 사이트 : http://www.dbguide.net/  --> 이전함
-          https://dataonair.or.kr
-               http://www.javatpoint.com/sql-tutorial
+	--- 참고 사이트 : http://www.dbguide.net/  --> 이전함
+ 			https://dataonair.or.kr
+		         http://www.javatpoint.com/sql-tutorial
 
 =========================================
 >> day14 -  22/02/15
 
  >> GUI : awt, swing, JavaFX (jdk 7.0 이후~)  - 뺄수도~
+
+   - 컨테이너 ? 
+   - 컴포넌트 ? 
+
+ -->> 참고 
+   https://docs.oracle.com/javase/tutorial/uiswing/events/windowlistener.html
+   www.tutorialspoint.com/awt
+   http://www.programcreek.com/
   
  > Lambda Expression
    JDK 1.8 이상
@@ -37,16 +94,9 @@
  -- 단점 --
  . 재사용이 불가능하다.
  . 디버깅이 다소 까다롭다.
- . 람다를 남달하면 코드가 지저분함(중복 생성할 가능성이 높음)
+ . 람다를 남발하면 코드가 지저분함(중복 생성 할 가능성이 높음)
  . 재귀로 만들 경우에는 부적합한다.
 
- > network
-
- > Oracle
-
- > JDBC
-
- > Web
 
 ---------------------------------------------------------
 >> 팀(조)별 과제  - 매주 화요일 PM 2시:10 ~ 
@@ -80,13 +130,13 @@
   
    형식>
    public synchronized void deposit(int amount, String name) { 
-   임계영역,......;
+	임계영역,......;
    }
 
    public void deposit(int amount, String name) { 
-   synchronized(this) {
-      임계영역,......;
-   }
+	synchronized(this) {
+		임계영역,......;
+	}
    }
 
 문제] 구구단 출력하기 thread 이용할것 
@@ -105,9 +155,9 @@
 
  > IO ( Input  Ouput ) <----- java.io package
 
-            Input               Output
-   byte      ~~~~InputStream      |   ~~~OutputStream
-   charater      ~~~~Reader      |   ~~~Writer
+	         Input			 	  Output
+   byte	   ~~~~InputStream		|	~~~OutputStream
+   charater	   ~~~~Reader		|	~~~Writer
 
   -- InputStream : 입력의 최상위 클래스 : read()
   -- OutputStream : 출력의 최상위 클래스 : write()
@@ -132,20 +182,20 @@
   여 : (신장cm-100) X 0.85
 
  판정 >
-18.5 미만   체중부족
-18.5 ~ 22.9   정상
-23.0 ~ 24.9   과체중
-25.0 이상   비만
+18.5 미만	체중부족
+18.5 ~ 22.9	정상
+23.0 ~ 24.9	과체중
+25.0 이상	비만
 
 
  URL
  URI
 
-  DataInputStream    / DataOutputStream
-  ObjectInputStream     / ObjectOutputStream
+  DataInputStream	 / DataOutputStream
+  ObjectInputStream 	 / ObjectOutputStream
  
-   readXXX();              writeXXX();    
-          자료형                    자료형
+   readXXX();	     		writeXXX(); 	
+          자료형		  	         자료형
 
 
 
@@ -157,18 +207,18 @@
   > Generic(제네릭)  :     <T> 
 
  class Point {
-   int x, y;
+	int x, y;
  }
 
  class GenericEx<T> {
-   T  x, y;
+	T  x, y;
  }
 
  > IO ( Input  Ouput ) <----- java.io package
 
-            Input               Output
-   byte      ~~~~InputStream      |   ~~~OutputStream
-   charater      ~~~~Reader      |   ~~~Writer
+	         Input			 	  Output
+   byte	   ~~~~InputStream		|	~~~OutputStream
+   charater	   ~~~~Reader		|	~~~Writer
 
   -- InputStream : 입력의 최상위 클래스 : read()
   -- OutputStream : 출력의 최상위 클래스 : write()
@@ -218,7 +268,7 @@
 
      Vector <---- jdk 1.x ,  가변길이,  동기화지원
      ArrayList  <--- jdk 2.x ,  가변길이,  동기화 지원안함
-        검색, 대량의 데이터 삽입/삭제
+	  	검색, 대량의 데이터 삽입/삭제
 
      LinkedList  <--- data 삽입/삭제 수월함
 
@@ -272,7 +322,7 @@ peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에
 
 >> 팀(조)별 과제  - 매주 화요일 PM 2시:10 ~ 
  <1번째 과제 : UML >
-     1팀 : 이동훈 - Class Diagram / Object Diagram   
+     1팀 : 이동훈 - Class Diagram / Object Diagram	
      2팀 : 성봉제 - Use Case Diagram / Deployment Diagram 
      3팀 : 이희원 - Sequence Diagram / Interaction Diagram  
      4팀 : 이상윤 - Collaboration Diagram / StateChart Diagram  
@@ -337,8 +387,8 @@ peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에
 
    형식>
       abstract public class Point {  // 부모 추상 클래스
-      void disp() {   }
-      abstract void show(); // 추상메소드
+		void disp() {   }
+		abstract void show(); // 추상메소드
       }
 
       class Sub extends Super {  // 자손(서브) 클래스
@@ -351,7 +401,7 @@ peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에
 문제1] Trans 추상클래스 <--- 부모는 모든 자손에게 상속할 수 있는 최소한의것
    추상메소드 start() / stop()
    public String name(String name) {
-    return name; 
+ 	return name; 
    }
 
    sub class : Subway / Bus / Biclycle / Plain
@@ -405,11 +455,11 @@ peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에
 
    Wraper class : 기본 자료형에 대응되는 클래스형 자료형
     기본 자료형             클래스형(레퍼런스 또는 참조형)자료형
-    int          Integer
-    float         Float
-    char         Character
-    double         Double
-    ....         ....
+    int 			Integer
+    float			Float
+    char			Character
+    double			Double
+    ....			....
 
    java.util package
    Random class
@@ -476,7 +526,7 @@ peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에
   sub class : Circle 원의 넓이 , Triangle 삼각형넓이 
 
 문제3]  Employee <--------------------- Regular  <------------------------ Sales 
-       이름, 직급, 부서, 연락처             급여           커미션 
+       이름, 직급, 부서, 연락처	          급여			  커미션 
 
            PartTime
               일수 * 시간 단가 
@@ -498,11 +548,11 @@ peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에
      Math.random() * n <=== 0 ~ n-1 값 추출됨
 
   2) Random calss - java.util package
-   nextXXX();
-          자료형
-   nextInt();
-   nextDouble(), 
-   nextFloat(),....
+	nextXXX();
+	       자료형
+	nextInt();
+	nextDouble(), 
+	nextFloat(),....
 
        rand.nextInt(n);  // 0 ~ n-1 값 추출함
 
@@ -515,7 +565,7 @@ peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에
 
 >> 팀(조)별 과제  - 매주 화요일 PM 2시:10 ~ 
  <1번째 과제 : UML >
-     1팀 : 이동훈 - Class Diagram / Object Diagram   
+     1팀 : 이동훈 - Class Diagram / Object Diagram	
      2팀 : 성봉제 - Use Case Diagram / Deployment Diagram 
      3팀 : 주승범 - Sequence Diagram / Interaction Diagram  
      4팀 : 이상윤 - Collaboration Diagram / StateChart Diagram  
@@ -552,15 +602,15 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
 
 > 확장 for문
     for(자료형 변수명 : 컬렉션명 or 배열명) {   
-   반복구문;
+	반복구문;
     }
 
  > 함수(Method)
   메인함수 부담 줄이고, 반복적인 코드를 함수로 만들어서 사용
   - instance method : 객채 생성하고 사용해야함(메모리상에 할당이 되어야....)
   - static method :  객체 생성 없이 바로 사용 가능함
-   object.methodName();
-   ClassName.methodName();  // <---
+	object.methodName();
+	ClassName.methodName();  // <---
  
   - 매개변수의 유무 / 리턴타입 유무
   1) 매개변수 없고, 리턴타입 없는 경우
@@ -575,14 +625,14 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
 
   4) 매개변수 있고, 리턴타입 있는 경우
     public returnType methodName(parameter var1,..){ 
-   return value;  
+	return value;  
     }
 
     예) public String name(String irum, int x){ 
-      
-    String msg = irum + x;
-    //return irun;
-     return msg;
+		
+	 String msg = irum + x;
+	 //return irun;
+	  return msg;
         }
 
  > return 값;  // 오직 1개의 데이터만 리턴한다.
@@ -594,7 +644,7 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
 문제3] max() {   두개 정수 입력 받아서 큰수 리턴 하는 함수 }
 문제4] add(x,y),  sub(-) , mul(*), div( / ) 
       sub(-) , mul(*) 리턴타입 
-      div( / )  예외처리 할것    
+      div( / )  예외처리 할것 	
  
 문제5] 성적처리 프로그램 함수로 분할(분리)할것
    입력 함수 input()  - 이름 , 국어, 영어,전산 점수 
@@ -626,9 +676,9 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
   class Rect { x,y, x2, y2 }
 
  문제1] class Sawn {
-   이름, 직급, 부서, 급여, 연락처
-   setter /getter method
-   output method   
+	이름, 직급, 부서, 급여, 연락처
+	setter /getter method
+	output method	
 }
 
  - 상속
@@ -666,15 +716,15 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
   int a = 1, b = 1;
 
    do{
-   do {
+	do {
 
-      S.o.pt( b + "\t");
-      b++;   
+		S.o.pt( b + "\t");
+		b++;	
 
-   } while( b <= 3 ); 
-   
-   a++;
-   S.o.pln();
+	} while( b <= 3 ); 
+	
+	a++;
+	S.o.pln();
 
   } while( i <= 2 );
 
@@ -720,7 +770,7 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
           int seek = 7; 
 
   문제2] 기상청
-     1월의 평균 강수량 구하는 프로그램 작성 (단, 30일 기준) 
+  	1월의 평균 강수량 구하는 프로그램 작성 (단, 30일 기준) 
       int NUM = 3;
       int[] arr = new int[NUM];
 
@@ -747,8 +797,8 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
 
  문제2] 윤년/평년 판정 프로그램 작성
    if( year % 4 == 0 ) 
-   if( year % 100 != 0) || if( year % 400 == 0)
-      "윤년" 
+	if( year % 100 != 0) || if( year % 400 == 0)
+		"윤년" 
  문제3] 전산,영어,국어 점수 입력 받아서 평균 60점이상이고,
      각 과목 과락 40점이하면 과목 불합격 처리하는 프로그램 작성
 
@@ -785,12 +835,12 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
  do~while
 
  for(초기값; 조건; 증감식) {
-   반복구문 ;
- }   
+	반복구문 ;
+ }	
 
 for(초기식;조건식;증감식){
-   수행문1;
-   수행문2;
+	수행문1;
+	수행문2;
   }
 --------------------------------------------------------
   예) 
@@ -798,13 +848,13 @@ for(초기식;조건식;증감식){
 
   for(a = 1;a <= 2 ; a++){
 
-   S.o.pt( a + "\t" );
+	S.o.pt( a + "\t" );
   }
 
    - 초기값/증감식은 2개 이상 기재 가능
-   ( 단, 조건은 오직 1개여야함)
+	( 단, 조건은 오직 1개여야함)
    - 초기값/증감식은 생략 가능
-   (단, 조건 생략하면 무한루프임)
+	(단, 조건 생략하면 무한루프임)
     
 
 예) 
@@ -812,15 +862,15 @@ for(초기식;조건식;증감식){
 
   for(a = 1, b=2; a <= 10 ; a++, b+=2){
 
-   S.o.pt( b + "\t" );
+	S.o.pt( b + "\t" );
   }
 -----------------------------------
   int a = 1; // 초기화
 
   for(   ; a <= 2 ;    ){
 
-   S.o.pt( a + "\t" );
-   a++;  // 증감식
+	S.o.pt( a + "\t" );
+	a++;  // 증감식
   }
 
  - 무한루프 
@@ -828,9 +878,9 @@ for(초기식;조건식;증감식){
 
   for(  ;  ;  ) {
 
-   S.o.pt( a + "\t" );
-   if(조건) break;   //탈출구문
-   
+	S.o.pt( a + "\t" );
+	if(조건) break;   //탈출구문
+	
   }
 
  문제1] 1~ 10까지 출력하는 프로그램 작성 (for문 )
@@ -838,45 +888,45 @@ for(초기식;조건식;증감식){
  문제3] 1~ 100까지 중에서 짝수 출력하고 한행에 10개씩 출력
  문제4] 1~ 100까지 중에서 3의 배수의 합과 개수는 ? 
  문제5] 원하는 단을 입력 받아서 구구단 출력하는 프로그램 작성
-   
+	
  - 다중 for
 
  for(초기식1 ; 조건식1 ; 증감식1) {
 
-   for(초기식2 ; 조건식2 ; 증감식2){
+	for(초기식2 ; 조건식2 ; 증감식2){
 
-      명령어2;
+		명령어2;
 
-   } //end for in
+	} //end for in
 
  } //end for out
 
 
 과제3] 
-1.    2.   3.   4.
-*   *****       *   *****
-**   ****      **    ****
-***   ***     ***     ***
-****   **    ****      **
-*****   *   *****       *
+1. 	2.	3.	4.
+*	*****	    *	*****
+**	****	   **	 ****
+***	***	  ***	  ***
+****	**	 ****	   **
+*****	*	*****	    *
 
-5.      6.
-    *       *********
-   ***        *******
-  *****         *****
- *******          ***
-*********              *
+5.		6.
+    *		 *********
+   ***		  *******
+  *****		   *****
+ *******		    ***
+*********	   	     *
 
-   7.      
-       *      
-      ***      
-     *****      
-    *******   
-   *********   
-    *******   
-     *****      
-      ***      
-       *      
+	7.		
+	    *		
+	   ***		
+	  *****		
+	 *******	
+	*********	
+	 *******	
+	  *****		
+	   ***		
+	    *		
 
 
 4. 기타구문
@@ -905,7 +955,7 @@ for(초기식;조건식;증감식){
  > 자료형 마무리
  > 연산자  - 우선순위 있음
     최단산쉬관논삼대콤
- 높 <---         ---> 낮  
+ 높 <---	      ---> 낮  
 
  > 입력받기
  java.io <---- Input / Output
@@ -949,10 +999,10 @@ for(초기식;조건식;증감식){
 
 class ClassName {
 
-   pubulic static void main(String[] args) {
-      
-      System.out.print("contents");
-   }
+	pubulic static void main(String[] args) {
+		
+		System.out.print("contents");
+	}
 }
 
  > 출력 함수 
@@ -966,13 +1016,13 @@ class ClassName {
 접근지정자  클래스   클래스명
 public     class     Hello    {  //시작블럭
 
-   public static void main(String[] args) {  //시작점(진입점)
+	public static void main(String[] args) {  //시작점(진입점)
 
-      System.out.print("Hello Java!!!"); // 문자열데이터
-      System.out.print(100);  //정수데이터
-      System.out.print(12.345);  //실수데이터
+		System.out.print("Hello Java!!!"); // 문자열데이터
+		System.out.print(100);  //정수데이터
+		System.out.print(12.345);  //실수데이터
 
-   } // end main
+	} // end main
 
 }  // 끝블럭,  end class
 ------------------------------------------------------
@@ -982,7 +1032,7 @@ public     class     Hello    {  //시작블럭
  
  > 실행 - java 파일명 (.class 생략한다) 
  D:\DouZone_th2\1_Java\workspace> java Hello
-   
+	
    - 이클립스 
   
   JDK : java 개발 + 실행
@@ -1058,3 +1108,4 @@ http://192.168.2.21/DouZone_th2
 >> 이도연(영희)
  ai.edu.kingsmile@gmail.com
  010-9872-0202
+
