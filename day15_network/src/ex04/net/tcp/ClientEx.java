@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 
-public class ClientEx2 {
+public class ClientEx {
 
 	public static void main(String[] args) {
 
