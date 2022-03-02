@@ -1,3 +1,163 @@
+>> day23 -  22/02/28 
+
+0. JDBC with ATP 
+  - ATP 설정 모두 마친 상태일것!!
+
+1. 다운 받은 전자지갑 압축 풀어서 파일 2개 확인 및 수정
+  1-1) sqlnet.ora <--- "C:\app\Oracle\Wallet_kosaDB" 자신의 전자지갑 위치로 변경
+WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="C:\app\Oracle\Wallet_kosaDB")))
+SSL_SERVER_DN_MATCH=yes
+ 
+ 1-2) tnsnames.ora  <--- 사용하고 있는 디비이름 ( == host name)
+
+2. 이클립스에서 프로젝트 생성한다. day24_jdbc 
+3. lib 폴더 만든다.  <--- oracle.properties 파일 코딩
+#oracle.properties
+driver=oracle.jdbc.driver.OracleDriver
+url=jdbc:oracle:thin:@kosadb_high?TNS_ADMIN=C:\\app\\Oracle\\Wallet_kosaDB
+user=kingsmile
+password=xxxxxxAt22cc
+
+4. 라이브러리 추가하기 
+ oracle_lib 라이브러리 폴더 ,  cf) ons.jar 파일 제외하고 넣기 (속도 문제 해결)
+
+ -- 참고 : 
+ https://docs.oracle.com/en/database/oracle/oracle-database/12.2/jjdbc/JDBC-support-Oracle-FAN.html#GUID-069265AF-BBEE-4682-9906-98D8429BFC1C
+
+ https://stackoverflow.com/questions/58873384/spring-boot-app-error-log-says-attempt-to-configure-ons-in-fanmanager-failed-wit#
+
+1) 라이브러리 넣기
+2) lib 폴더에도 넣기
+
+
+1. 드라이브 로드
+2. Connection & Open
+3. 사용 (DML 명령)
+ Statement  /  PreparedStatement  interface 
+  executeQuery() : 반환값이 있는 경우 - select
+  executeUpdate() : 반환값이 없는 경우 - insert/update/delete
+
+   rs.getXXX("필드명");    또는   rs.getXXX(인덱스번호);
+            자료형
+
+   PreparedStatement  ps ;
+    ps.setXXX(1, 2);   // 순번, 데이터값
+              자료형 
+
+4. 자원반환(닫기)
+
+
+
+
+ > JDBC
+
+ - 참고 사이트 :
+
+https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-sql-dev182.html#GUID-14217939-3E8F-4782-BFF2-021199A908FD
+
+ user="ADMIN"
+ password="데이터베이스_생성할때_사용한_암호"
+
+ user="user01"
+ password="xxxxxxAt22cc"
+
+#oracle.properties
+driver=oracle.jdbc.driver.OracleDriver
+url=jdbc:oracle:thin:@kosadb_high?TNS_ADMIN=C:\\app\\Oracle\\Wallet_kosaDB
+user=kingsmile
+password=xxxxxxAt22cc
+
+
+ C:\Users\COM>set TNS_ADMIN=C:\app\Oracle\Wallet_kosaDB
+ C:\Users\COM>sqlplus kingsmile/xxxxxxAt22cc@kosadb_high
+
+
+  https://docs.oracle.com/en/cloud/paas/autonomous-database/atpdg/java-application.html#GUID-6B2610C1-120C-46F0-876C-E7D871CEC267
+
+ 
+
+--> https://www.oracle.com/database/technologies/appdev/jdbc-ucp-183-downloads.html
+
+**************************************************************************
+【 Database별 Driver 와 connection URL 】
+
+DATABASE | VALUE 
+---------------------------------------------------
+ORACLE | DRIVER | oracle.jdbc.driver.OracleDriver 
+| URL | jdbc:oracle:thin:@hostname:port:SID 
+
+MSSQL | DRIVER | com.microsoft.jdbc.sqlserver.SQLServerDriver 
+| URL | jdbc:Microsoft:sqlserver://localhost:1433;databasename=DB명 
+
+MYSQL | DRIVER | org.gjt.mm.mysql.Driver | | (또는)com.mysql.jdbc.Driver
+| URL | jdbc:mysql://localhost:3306/DB명 
+
+
+(3) 프로그램에서 DB연결
+
+1단계 : JDBC드라이버 로드
+Class.forName("드라이버종류");
+
+★ 드라이버 종류
+1. Access드라이버(ODBC) : Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+2. MySQL 드라이버: Class.forName(“com.mysql.jdbc.Driver”);
+3. 오라클 드라이버 : Class.forName(“oracle.jdbc.OracleDriver”);
+4. MS-SQL 드라이버 : Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver ");
+
+--------------------------------------------------------------------
+예)Connection conn = DriverManager.getConnection("jdbc:odbc:jdbc", "kingsmile", "oracle");
+
+1. Access인경우 : jdbc:odbc:ODBC명
+2. 오라클인경우 : jdbc:oracle:thin:@localhost:1521:SID
+3. MySQL인경우 : jdbc:mysql://localhost:3306/DB명
+4. MS-SQL인경우 : jdbc:Microsoft:sqlserver://localhost:1433;databasename=DB명 
+------------------------------------------------------------------
+  1) 드라이버 로드
+	Class.forName("oracle.jdbc.OracleDriver");
+  2) 연결 
+	Connection conn = DriverManager.getConnection(url, uid, pwd); 
+  3) SQL 명령어 사용
+	Statement stmt = conn.createStatement();
+	ResultSet rs = stmt.executeQuery(" select * from gift "); //반환값 있는 경우
+	-----------------------------------------------------------------
+	stmt.executeUpdate(sql);  // 반환값이 없는 경우 
+  4) 닫기
+	rs.close();    stmt.close();    conn.close();
+
+  - API 확인하기
+
+ > Database 연결 eclipse : Data Source Exploer
+
+
+ > MVC (Model2)
+
+  Model <--- DB를 클래스로 만든다.
+  View  <--- main
+  Controller <--- 뷰 와 모델을 연결 역할 
+
+
+======================================
+>> day16 -  22/02/17
+
+ > network  <---- java.net.* ; 
+
+  - TCP  		vs  	UDP
+    신뢰성있음		신뢰성낮음
+    양방향성	(전화)		단방향성(방송국,편지)
+
+
+ > Oracle
+  1.  설치
+  2. oracle cloud  <--- 
+
+  > sql developer 설치
+
+ > JDBC
+
+ > Web
+
+
+=========================================
 >> day15 -  22/02/16
 
 > network  <---- java.net.* ; 
@@ -42,12 +202,9 @@
    소켓 (socket)  
 
    
- > Oracle
-
- > JDBC
-
- > Web
-
+ - 참고 인강
+ https://www.youtube.com/playlist?list=PLieE0qnqO2kTyzAlsvxzoulHVISvO8zA9
+ 
 --------------------------------------------------------
 >> 팀(조)별 과제  - 매주 화요일 PM 2시:10 ~ 
  <3번째 과제 : DataBase >
