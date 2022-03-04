@@ -1,4 +1,4 @@
-package quiz.ex1;
+package quiz.prob123;
 
 public class Prob3 {
 	public static void main(String[] args) {
