@@ -1,4 +1,62 @@
->> day23 -  22/02/28 
+>> day26 -  22/03/04 
+
+  > JDBC & GUI
+     마무리
+
+  > MVC (Model2)
+
+
+  > 실기 테스트 
+
+   
+강사컴 : 
+ http://192.168.2.10/DouZone_th2/
+
+------------------------------------------------------------
+ >> 팀(조)별 과제  - 매주 화요일 PM 2시:10 ~ 
+ <5번째 과제 : Refactorying >
+     1팀 : 이동훈  - Pull Up field / Pull Up Method
+     2팀 &  
+     4팀 : 이상윤  - Inline class / Rename Method 
+     3팀 : 이희원  - Replace Temp with Query / Encapsulation Field
+     5팀 : 엄태문  - Move Method / Move Field
+     6팀 : 오윤성  - Extract Method / Extract class
+
+==============================================
+>> day25 -  22/03/03 
+
+ > JDBC
+
+ Data 연결 툴 ?? X
+
+ > MVC (Model2)
+
+  Model <--- DB를 클래스로 만든다.
+  View  <--- main
+  Controller <--- 뷰 와 모델을 연결 역할 
+
+
+문제] 고객 테이블 이용한 JDBC CRUD 구현하기 (mvc 형태로~ )
+
+
+
+public static void menu() {
+		System.out.println("\n-=-=-=-= JDBC Query =-=-=-=-");
+		System.out.println("\t 1. 레코드 삽입(추가) ");
+		System.out.println("\t 2. 레코드 수정) ");
+		System.out.println("\t 3. 전체보기 ");
+		System.out.println("\t 4. 조건에 의한 검색(ex>상품번호) ");
+		System.out.println("\t 5. 레코드 삭제 ");
+		System.out.println("\t 6. 프로그램 종료 ");
+		System.out.println("원하는 메뉴 선택 하세요. ");	
+	}
+
+--------------------------------------------------------
+ < 4번째 과제 :  >
+  >> 통합 과제 - 정규 표현식 & 예시 5개 (이메일, 전화번호, 주민번호, 우편번호, URL, IP 주소,  HTML 태그,...)  
+
+=======================================
+>> day24 -  22/03/02 
 
 0. JDBC with ATP 
   - ATP 설정 모두 마친 상태일것!!
@@ -37,6 +95,7 @@ password=xxxxxxAt22cc
   executeQuery() : 반환값이 있는 경우 - select
   executeUpdate() : 반환값이 없는 경우 - insert/update/delete
 
+   ResultSet rs; 
    rs.getXXX("필드명");    또는   rs.getXXX(인덱스번호);
             자료형
 
